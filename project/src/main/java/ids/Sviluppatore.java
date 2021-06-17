@@ -1,6 +1,6 @@
 package ids;
 
-public class Sviluppatore implements Dipendente {
+public class Sviluppatore extends Dipendente {
     private String nome;
     private float stipendio;
     public Sviluppatore(String nome, float stipendio) {
@@ -8,17 +8,16 @@ public class Sviluppatore implements Dipendente {
         this.stipendio = stipendio;
     }
     /**
-     * Il metodo getDettagli() ha il compito di stampare
-     * a video le informazioni principali rispetto ogni
-     * Dipendente di un certo Dipartimento.
+     * Il metodo displayDettagli() ha il compito di stampare
+     * a video le informazioni principali rispetto il dipendente
      */
     @Override
-    public void getDettagli() {
-        System.out.println("\t 💻 Sviluppatore = " + nome);
+    public void displayDettagli() {
+        System.out.println("| \t | 💻 Sviluppatore = " + nome);
     }
     /**
-     * Il metodo getStipendio() ha il compito di ritornare la somma
-     * degli stipendi rispetto ogni Dipendente di un certo Dipartimento.
+     * Il metodo getStipendio() ha il compito di ritornare lo stipendio
+     * rispetto un Dipendente dell'azienda
      */
     @Override
     public float getStipendio() {

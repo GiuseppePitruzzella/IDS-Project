@@ -1,6 +1,6 @@
 package ids;
 
-public class Designer implements Dipendente {
+public class Designer extends Dipendente {
     private String nome;
     private float stipendio;
     public Designer(String nome, float stipendio) {
@@ -8,17 +8,16 @@ public class Designer implements Dipendente {
         this.stipendio = stipendio;
     }
     /**
-     * Il metodo getDettagli() ha il compito di stampare
-     * a video le informazioni principali rispetto ogni
-     * Dipendente di un certo Dipartimento.
+     * Il metodo displayDettagli() ha il compito di stampare
+     * a video le informazioni principali rispetto il dipendente
      */
     @Override
-    public void getDettagli() {
-        System.out.println("\t 🎨 Designer = " + nome);
+    public void displayDettagli() {
+        System.out.println("| \t | 🎨 Designer = " + nome);
     }
     /**
-     * Il metodo getStipendio() ha il compito di ritornare la somma
-     * degli stipendi rispetto ogni Dipendente di un certo Dipartimento.
+     * Il metodo getStipendio() ha il compito di ritornare lo stipendio
+     * rispetto un Dipendente dell'azienda
      */
     @Override
     public float getStipendio() {
@@ -26,8 +25,8 @@ public class Designer implements Dipendente {
     }
     /**
      * Il metodo targetBonus() ha il compito di ritornare
-     * il bonus assegnato in base all'insieme a cui il
-     * dipendente fa parte. E' utile al calcolo dello stipendio totale.
+     * il bonus assegnato in base all'insieme in cui il
+     * dipendente rientra. E' utile al calcolo dello stipendio totale.
      * @return Bonus
      */
     private int targetBonus() {
