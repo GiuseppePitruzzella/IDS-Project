@@ -3,6 +3,7 @@ package ids;
 public final class App {
     private App() {}
     public static void main(String[] args) {
+        /** TODO: Sistema main() */
         Dipendente Sviluppo = new Dipartimento("Dipartimento di Ricerca e Sviluppo");
         Dipendente Maps = new Dipartimento("Google Maps Division");
         Dipendente Sales = new Dipartimento("Reparto vendite");
@@ -17,10 +18,6 @@ public final class App {
         Sviluppo.displayDettagli();
         System.out.println("\n");
         Sales.displayDettagli();
-        /**
-         * TODO
-         * Trasformare il metodo getSalary in void (come getDetails)?
-         */
         System.out.println(Sviluppo.getStipendio());
         System.out.println(managerSviluppo.getStipendio());
         managerSviluppo.displayDettagli();
