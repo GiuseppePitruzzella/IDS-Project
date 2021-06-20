@@ -13,7 +13,7 @@ public class Sviluppatore extends Dipendente {
      */
     @Override
     public void displayDettagli() {
-        System.out.println("| \t | 💻 Sviluppatore = " + nome);
+        System.out.println("\t 💻 Sviluppatore = " + nome);
     }
     /**
      * Il metodo getStipendio() ha il compito di ritornare lo stipendio

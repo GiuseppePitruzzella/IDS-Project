@@ -3,24 +3,28 @@ package ids;
 public final class App {
     private App() {}
     public static void main(String[] args) {
-        /** TODO: Sistema main() */
-        Dipendente Sviluppo = new Dipartimento("Dipartimento di Ricerca e Sviluppo");
-        Dipendente Maps = new Dipartimento("Google Maps Division");
-        Dipendente Sales = new Dipartimento("Reparto vendite");
-        Dipendente managerSviluppo = new Manager("Emiliano Tramontana", 2000);
-        Dipendente frontendDev = new Sviluppatore("Giuseppe Pitruzzella", 1500);
-        Dipendente backendDev = new Sviluppatore("Giuseppe Vitale", 1300);
-        Sviluppo.aggiungiDipendente(frontendDev);
-        Sviluppo.aggiungiDipendente(backendDev);
-        Sviluppo.aggiungiDipendente(Maps);
-        Maps.aggiungiDipendente(Sales);
-        Sales.aggiungiDipendente(managerSviluppo);
+        Dipendente Sviluppo = new Dipartimento("Dipartimento di Sviluppo");
+        Dipendente Project = new Dipartimento("Project X Division");
+        Dipendente SoftwareDevelopers = new Dipartimento("Software Developers");
+        Dipendente SecurityDevelopers = new Dipartimento("Security Developers");
+
+        Sviluppo.aggiungiDipendente(Project);
+        Project.aggiungiDipendente(SoftwareDevelopers);
+        Project.aggiungiDipendente(SecurityDevelopers);
+
+        Dipendente ManagerSviluppo = new Manager("Emiliano Tramontana", 5432);
+        Dipendente SWDevA = new Sviluppatore("Kent Beck", 2345);
+        Dipendente SWDevB = new Sviluppatore("Martin Fowler", 2534);
+        Dipendente SecDev = new Sviluppatore("Robert Martin", 2435);
+        Dipendente ProjectLeader = new Sviluppatore("Andrea Fornaia", 5432); 
+
+        Sviluppo.aggiungiDipendente(ManagerSviluppo);
+        SoftwareDevelopers.aggiungiDipendente(SWDevA);
+        SoftwareDevelopers.aggiungiDipendente(SWDevB);
+        SecurityDevelopers.aggiungiDipendente(SecDev);
+        Project.aggiungiDipendente(ProjectLeader);
+        
         Sviluppo.displayDettagli();
-        System.out.println("\n");
-        Sales.displayDettagli();
-        System.out.println(Sviluppo.getStipendio());
-        System.out.println(managerSviluppo.getStipendio());
-        managerSviluppo.displayDettagli();
-        managerSviluppo.aggiungiDipendente(backendDev);
+        System.out.println(Project.getStipendio());
     }
 }

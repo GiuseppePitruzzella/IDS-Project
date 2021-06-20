@@ -13,7 +13,7 @@ public class Manager extends Dipendente {
      */
     @Override
     public void displayDettagli() {
-        System.out.println("| \t | 💸 Manager = " + nome);
+        System.out.println("💸 Manager = " + nome);
     }
     /**
      * Il metodo getStipendio() ha il compito di ritornare lo stipendio

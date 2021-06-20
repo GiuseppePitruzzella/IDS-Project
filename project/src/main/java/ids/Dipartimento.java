@@ -27,7 +27,7 @@ public class Dipartimento extends Dipendente {
     @Override
     public void displayDettagli() {
         System.out.println("\u27a6 " + nomeDipartimento + " ( " + getStipendio() + " )");
-        listaDipendenti.stream().forEach(e -> e.displayDettagli());
+        listaDipendenti.stream().peek(x -> System.out.print(" ")).forEach(e -> e.displayDettagli());
     }
     /**
      * Il metodo getStipendio() ha il compito di ritornare la somma
