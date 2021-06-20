@@ -23,7 +23,6 @@ public class Dipartimento extends Dipendente {
      * Il metodo displayDettagli() ha il compito di stampare
      * a video le informazioni principali rispetto ogni
      * Dipendente di un certo Dipartimento.
-     * @implNote Sarebbe meglio non utilizzare gli attributi ma dei metodi get()?
      */
     @Override
     public void displayDettagli() {

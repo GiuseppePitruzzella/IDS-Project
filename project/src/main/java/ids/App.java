@@ -9,13 +9,9 @@ public final class App {
         Dipendente managerSviluppo = new Manager("Emiliano Tramontana", 2000);
         Dipendente frontendDev = new Sviluppatore("Giuseppe Pitruzzella", 1500);
         Dipendente backendDev = new Sviluppatore("Giuseppe Vitale", 1300);
-        Dipendente UIDesigner = new Designer("Breccia", 1400);
-        Dipendente UXDesigner = new Designer("Brec", 1300);
         Sviluppo.aggiungiDipendente(frontendDev);
         Sviluppo.aggiungiDipendente(backendDev);
         Sviluppo.aggiungiDipendente(Maps);
-        Maps.aggiungiDipendente(UIDesigner);
-        Maps.aggiungiDipendente(UXDesigner);
         Maps.aggiungiDipendente(Sales);
         Sales.aggiungiDipendente(managerSviluppo);
         Sviluppo.displayDettagli();
@@ -28,6 +24,6 @@ public final class App {
         System.out.println(Sviluppo.getStipendio());
         System.out.println(managerSviluppo.getStipendio());
         managerSviluppo.displayDettagli();
-        // frontendDev.aggiungiDipendente(backendDev);
+        managerSviluppo.aggiungiDipendente(backendDev);
     }
 }

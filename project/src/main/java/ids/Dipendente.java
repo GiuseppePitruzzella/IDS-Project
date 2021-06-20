@@ -11,7 +11,7 @@ public abstract class Dipendente {
      * Il metodo aggiungiDettagli() ha il compito di aggiungere
      * un elemento semplice all'interno di una lista; ciò permetterà
      * la loro gestione.
-     * Si noti che il seguente metodo, insieme al suo speculare, forniscono un
+     * Si noti che il seguente metodo, insieme al suo inverso, forniscono un
      * implementazione base per chi non farà Override dei metodi, ovvero le leaf,
      * le quali non avranno bisogno di quest'ultimi metodi.
      * Se chiamati a partire da una Leaf, sarà generata un exception.
@@ -23,7 +23,7 @@ public abstract class Dipendente {
      * Il metodo rimuoviDipendente() ha il compito di rimuovere
      * un elemento semplice all'interno di una lista; ciò permetterà
      * la loro gestione.
-     * Si noti che il seguente metodo, insieme al suo speculare, forniscono un
+     * Si noti che il seguente metodo, insieme al suo inverso, forniscono un
      * implementazione base per chi non farà Override dei metodi, ovvero le leaf,
      * le quali non avranno bisogno di quest'ultimi metodi.
      * Se chiamati a partire da una Leaf, sarà generata un exception.
@@ -31,6 +31,6 @@ public abstract class Dipendente {
     public void rimuoviDipendente(Dipendente D) {
         throw new UnsupportedOperationException();
     }
-    abstract void displayDettagli();
-    abstract float getStipendio();
+    public abstract void displayDettagli();
+    public abstract float getStipendio();
 }
