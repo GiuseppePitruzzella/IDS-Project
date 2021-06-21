@@ -9,7 +9,7 @@ public class Dipartimento extends Dipendente {
     public Dipartimento(String nomeDipartimento) {
         this.nomeDipartimento = nomeDipartimento;
     }
-
+    
     @Override
     public void aggiungiDipendente(Dipendente D) {
         listaDipendenti.add(D);
